@@ -4,6 +4,8 @@ addons:
     packages:
       - oraclejdk8  # install Java8 as required by vnu.jar
 
+sudo: enabled
+
 branches:
   only:
     - master
