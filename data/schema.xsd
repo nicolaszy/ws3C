@@ -9,11 +9,12 @@
                 <xs:element name="entry" maxOccurs="unbounded" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="recuring">
+                            <xs:element type="xs:string" name="title"/>
+                            <xs:element name="recuring" minOccurs="0">
                                 <xs:complexType>
                                     <xs:simpleContent>
                                         <xs:extension base="xs:string">
-                                            <xs:attribute type="xs:string" name="r" use="optional"/>
+                                            <xs:attribute type="xs:string" name="r"/>
                                         </xs:extension>
                                     </xs:simpleContent>
                                 </xs:complexType>
@@ -21,14 +22,14 @@
                             <xs:element name="location">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element type="xs:string" name="street"/>
-                                        <xs:element type="xs:short" name="plz"/>
-                                        <xs:element type="xs:string" name="city"/>
+                                        <xs:element type="xs:string" name="street" minOccurs="0"/>
+                                        <xs:element type="xs:short" name="plz" minOccurs="0"/>
+                                        <xs:element type="xs:string" name="city" minOccurs="0"/>
                                     </xs:sequence>
                                     <xs:attribute type="xs:string" name="name" use="optional"/>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element type="xs:string" name="description"/>
+                            <xs:element type="xs:string" name="description" minOccurs="0"/>
                         </xs:sequence>
                         <xs:attribute type="xs:int" name="from" use="optional"/>
                         <xs:attribute type="xs:int" name="to" use="optional"/>
