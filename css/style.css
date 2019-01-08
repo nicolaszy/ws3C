@@ -55,3 +55,12 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+.agendaentry {
+
+}
+
+.agendatitle {
+  padding: 10px 15px;
+  color: black;
+}

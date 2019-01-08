@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<agenda xmlns="https://christian-seiler.github.io/ws3C"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://christian-seiler.github.io/ws3C
+        https://christian-seiler.github.io/ws3C/data/schema.xsd">
+
+    <entry>
+        <title>Basteln</title>
+        <recuring r="jeden Donnerstag"/>
+        <date time="19:00"/>
+        <location name="Clublokal">
+            <street>Steingasse</street>
+            <plz>5610</plz>
+            <city>Wohlen AG</city>
+        </location>
+        <description>Chlaushok</description>
+    </entry>
+    <entry>
+        <title>Hock</title>
+        <date from="2019-03-01"/>
+        <location name="Clublokal">
+            <street>Steingasse</street>
+            <plz>5610</plz>
+            <city>Wohlen AG</city>
+        </location>
+        <description>Chlaushok</description>
+    </entry>
+</agenda>
