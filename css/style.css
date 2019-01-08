@@ -61,6 +61,6 @@ footer.page-footer {
 }
 
 .agendatitle {
-  background: #134;
-
+  padding: 10px 15px;
+  color: black;
 }

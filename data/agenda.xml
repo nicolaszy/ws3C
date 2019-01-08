@@ -4,9 +4,10 @@
         xsi:schemaLocation="https://christian-seiler.github.io/ws3C
         https://christian-seiler.github.io/ws3C/data/schema.xsd">
 
-    <entry from="20180301" to="20180301">
-
-        <recuring r="weekly"/>
+    <entry>
+        <title>Basteln</title>
+        <recuring r="jeden Donnerstag"/>
+        <date time="19:00"/>
         <location name="Clublokal">
             <street>Steingasse</street>
             <plz>5610</plz>
@@ -14,8 +15,9 @@
         </location>
         <description>Chlaushok</description>
     </entry>
-    <entry from="20180301" to="20180301">
-        <recuring r="weekly"/>
+    <entry>
+        <title>Hock</title>
+        <date from="2019-03-01"/>
         <location name="Clublokal">
             <street>Steingasse</street>
             <plz>5610</plz>
