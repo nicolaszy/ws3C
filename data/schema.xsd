@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns="https://christian-seiler.github.io/ws3C/"
-           targetNamespace="ws3C"
+           xmlns="https://christian-seiler.github.io/ws3C"
+           targetNamespace="https://christian-seiler.github.io/ws3C"
            elementFormDefault="qualified">
     <xs:element name="agenda">
         <xs:complexType>
@@ -32,7 +32,6 @@
                         </xs:sequence>
                         <xs:attribute type="xs:int" name="from" use="optional"/>
                         <xs:attribute type="xs:int" name="to" use="optional"/>
-                        <xs:attribute type="xs:string" name="recuring" use="optional"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
