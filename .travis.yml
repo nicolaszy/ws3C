@@ -9,5 +9,5 @@ branches:
 
 
 script:
-  - html5validator --root . --also-check-css
+  - html5-validator --root . --also-check-css
   - eslint js/*.js
