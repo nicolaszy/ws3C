@@ -11,6 +11,9 @@ branches:
 before_script:
   - npm install html5-validator -g
 
+install:
+  - npm install
+
 script:
   - html5-validator --root . --also-check-css
   - eslint js/*.js
