@@ -8,8 +8,8 @@ branches:
     - develop
 
 
-before_install:
-  - sudo npm install html5-validator -g
+install:
+  npm install html5-validator -g
 
 script:
   - html5-validator --root . --also-check-css
