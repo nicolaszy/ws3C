@@ -8,7 +8,7 @@ branches:
     - develop
 
 before_script:
-  - npm install html5-validator -g
+  - sudo npm install html5-validator -g
 
 script:
   - npm run-script lint
