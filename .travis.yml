@@ -7,13 +7,6 @@ branches:
   only:
     - develop
 
-
-before_script:
-  - npm install html5-validator -g
-
-install:
-  - npm install
-
 script:
-  - npm lint
-  - npm test
+  - npm run-script lint
+  - npm run-script test

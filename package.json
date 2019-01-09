@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "html5-validator --root . --also-check-css",
-    "lint": "eslint"
+    "lint": "eslint **/*.js"
   },
   "repository": {
     "type": "git",
