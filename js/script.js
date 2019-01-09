@@ -1,53 +1,37 @@
-// https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1
 
 $(document).ready(function () {
     parseAgenda();
 
-
-    // Add smooth scrolling to all links
+    // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1
     $("a").on('click', function (event) {
 
-        // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
-            // Prevent default anchor click behavior
             event.preventDefault();
 
-            // Store hash
-            var hash = this.hash;
+            let hash = this.hash;
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 800, function () {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
             });
-        } // End if
+        }
     });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    console.log($navbarBurgers);
-    // Check if there are any navbar burgers
     if ($navbarBurgers.length > 0) {
 
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-            el.addEventListener('click', () => {
+        $navbarBurgers.forEach(element => {
+            element.addEventListener('click', () => {
 
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
+                const target = element.dataset.target;
                 const $target = document.getElementById(target);
 
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
+                element.classList.toggle('is-active');
                 $target.classList.toggle('is-active');
-
             });
         });
     }
@@ -89,28 +73,24 @@ function parseAgenda() {
                 let from = d.getAttribute('from');
                 let to = d.getAttribute('to');
                 let time = d.getAttribute('time');
-                date.innerHTML = createDateString(from, to, time);
-            }
+                let r = entry.getElementsByTagName('recuring')[0];
 
-            let recuring = document.createElement('p');
-            let r = entry.getElementsByTagName('recuring')[0];
-            if (r) {
-                recuring.innerHTML = r.getAttribute('r');
+                date.innerHTML = createDateString(from, to, time, r);
             }
-
 
             let description = document.createElement('p');
             description.innerHTML = entry.getElementsByTagName('description')[0].innerHTML;
 
-
             let loc = entry.getElementsByTagName('location')[0];
+            let location = loc.getAttribute('name');
             let address = document.createElement('address');
             let street = loc.getElementsByTagName('street')[0].innerHTML;
             let plz = loc.getElementsByTagName('plz')[0].innerHTML;
             let city = loc.getElementsByTagName('city')[0].innerHTML;
-            address.innerHTML = street + '<br/>' + plz + " " + city;
 
-            box.append(title, date, recuring, description, address);
+            address.innerHTML = location + '<br/>' + street + '<br/>' + plz + " " + city;
+
+            box.append(title, date, description, address);
             div.appendChild(box);
             agenda.appendChild(div);
         }
@@ -118,7 +98,7 @@ function parseAgenda() {
 
     }
 
-    function createDateString(from, to, time) {
+    function createDateString(from, to, time, recurence) {
         let result = "";
         if (from) {
             result += new Date(from).toLocaleDateString('de-CH');
@@ -126,11 +106,15 @@ function parseAgenda() {
                 result += " - " + new Date(to).toLocaleDateString('de-CH');
             }
         }
-
+        if (recurence) {
+            result += result.length > 0 ? " " : "";
+            result += recurence.getAttribute('r');
+        }
         if (time) {
             result += result.length > 0 ? " " : "";
             result += time;
         }
+
         return result;
     }
 }
