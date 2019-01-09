@@ -11,5 +11,5 @@ before_script:
   - npm install html5-validator -g
 
 script:
-#  - npm run-script lint
-  - npm run-script test
+  - npm run-script lint
+#  - npm run-script test
