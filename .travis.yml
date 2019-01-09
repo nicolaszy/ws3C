@@ -15,5 +15,5 @@ install:
   - npm install
 
 script:
-  - html5-validator --root . --also-check-css
-  - eslint js/*.js
+  - npm lint
+  - npm test

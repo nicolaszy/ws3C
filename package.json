@@ -4,7 +4,8 @@
   "description": "[![Build Status](https://travis-ci.org/Christian-Seiler/ws3C.svg?branch=develop)](https://travis-ci.org/Christian-Seiler/ws3C)",
   "main": "script.js",
   "scripts": {
-    "test": "eslint"
+    "test": "html5-validator --root . --also-check-css",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
