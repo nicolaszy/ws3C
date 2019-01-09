@@ -13,32 +13,47 @@
           media="screen"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/>
 
+    <!-- JavaScript -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
 
+
+<!-- --------------------------------------------- -->
+<!--                   Navigation                  -->
+<!-- --------------------------------------------- -->
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
             <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="Logo">
         </a>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-           data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger burger"
+           aria-label="menu"
+           aria-expanded="false"
+           data-target="navMenu">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
     </div>
 
-    <div class="navbar-menu">
+    <div class="navbar-menu" id="navMenu">
         <div class="navbar-start">
             <a href="#home" class="navbar-item">Home</a>
+            <a href="#anlage" class="navbar-item">Anlage</a>
             <a href="#termine" class="navbar-item">Termine</a>
+            <a href="#ueberuns" class="navbar-item">Über uns</a>
+            <a href="#referenzen" class="navbar-item">Referenzen</a>
         </div>
     </div>
 </nav>
 
-
+<!-- --------------------------------------------- -->
+<!--                      Home                     -->
+<!-- --------------------------------------------- -->
 <div class="section" id="home">
     <div class="container">
         <figure class="image is-4by3">
@@ -47,7 +62,19 @@
     </div>
 </div>
 
+<!-- --------------------------------------------- -->
+<!--                     Anlage                    -->
+<!-- --------------------------------------------- -->
+<div class="section" id="anlage">
+    <div class="container">
+        <h2 class="title">Anlage</h2>
+    </div>
+</div>
 
+
+<!-- --------------------------------------------- -->
+<!--                     Agenda                    -->
+<!-- --------------------------------------------- -->
 <div class="section" id="termine">
     <div class="container">
         <h2 class="title">Termine</h2>
@@ -55,7 +82,28 @@
     </div>
 </div>
 
+<!-- --------------------------------------------- -->
+<!--                    Über uns                   -->
+<!-- --------------------------------------------- -->
+<div class="section" id="ueberuns">
+    <div class="container">
+        <h2 class="title">Über uns</h2>
+    </div>
+</div>
 
+<!-- --------------------------------------------- -->
+<!--                   Referenzen                  -->
+<!-- --------------------------------------------- -->
+<div class="section" id="referenzen">
+    <div class="container">
+        <h2 class="title">Referenzen</h2>
+
+    </div>
+</div>
+
+<!-- --------------------------------------------- -->
+<!--                     Footer                    -->
+<!-- --------------------------------------------- -->
 <footer class="footer">
     <div class="content has-text-centered">
         <p>
