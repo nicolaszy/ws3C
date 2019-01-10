@@ -10,5 +10,6 @@
         <option value="reformatChangedCode" />
       </set>
     </option>
+    <option name="configurationPath" value="" />
   </component>
 </project>
