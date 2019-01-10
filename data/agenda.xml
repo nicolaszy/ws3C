@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <agenda xmlns="https://christian-seiler.github.io/ws3C"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://christian-seiler.github.io/ws3C
-        https://christian-seiler.github.io/ws3C/data/schema.xsd">
+        agenda.xsd">
 
     <entry>
         <title>Basteln</title>
