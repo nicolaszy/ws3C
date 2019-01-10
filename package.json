@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm-run-all -p -r lint html css",
     "lint": "eslint **/*.js",
-    "html": "html5v **/*.html",
+    "html": "html5v *.html",
     "css": "css-validator **/*.css"
   },
   "repository": {
