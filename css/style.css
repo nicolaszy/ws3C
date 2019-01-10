@@ -64,3 +64,7 @@ footer.page-footer {
   padding: 10px 15px;
   color: black;
 }
+
+a {
+  text-decoration: none;
+}

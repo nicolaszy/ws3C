@@ -3,6 +3,7 @@
 
 $(document).ready(function () {
 	parseAgenda()
+	parsePartner()
 
 	// https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1
 	$('a').on('click', function (event) {
@@ -40,6 +41,110 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+
+function parsePartner() {
+	let request = new XMLHttpRequest()
+	request.onreadystatechange = function () {
+		if (this.readyState === 4 && this.status === 200) {
+			read(this)
+		}
+	}
+	request.open('GET', 'data/partner.xml', true)
+	request.send()
+
+	function read(xml) {
+
+		let doc = xml.responseXML
+		let sponsors = document.getElementById('sponsors')
+		let friends = document.getElementById('friends')
+
+		let sponsorEntries = doc.getElementsByTagName('sponsor')
+		for (let i = 0; i < sponsorEntries.length; i++) {
+			let entry = sponsorEntries[i]
+			let div = document.createElement('div')
+			div.className = 'column is-half'
+
+			let box = document.createElement('div')
+			box.className = 'box'
+
+			if (entry.getElementsByTagName('image').length > 0) {
+				if (entry.getElementsByTagName('url').length > 0) {
+					let url = document.createElement('a')
+					url.setAttribute('href', entry.getElementsByTagName('url')[0].innerHTML)
+					url.setAttribute('target', '_blank')
+
+					let image = document.createElement('img')
+					image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
+					image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
+					url.appendChild(image)
+					box.appendChild(url)
+				} else {
+					let image = document.createElement('img')
+					image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
+					image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
+					box.appendChild(image)
+				}
+			} else {
+				if (entry.getElementsByTagName('url').length > 0) {
+					let url = document.createElement('a')
+					url.setAttribute('href', entry.getElementsByTagName('url')[0].innerHTML)
+					url.setAttribute('target', '_blank')
+					url.innerText = entry.getElementsByTagName('title')[0].innerHTML
+
+					box.appendChild(url)
+				} else {
+					box.innerText = entry.getElementsByTagName('title')[0].innerHTML
+				}
+			}
+			div.appendChild(box)
+			sponsors.appendChild(div)
+		}
+
+
+		let friendEntries = doc.getElementsByTagName('friend')
+		for (let i = 0; i < friendEntries.length; i++) {
+			let entry = friendEntries[i]
+			let div = document.createElement('div')
+			div.className = 'column is-half'
+
+			let box = document.createElement('div')
+			box.className = 'box'
+
+			if (entry.getElementsByTagName('image').length > 0) {
+				if (entry.getElementsByTagName('url').length > 0) {
+					let url = document.createElement('a')
+					url.setAttribute('href', entry.getElementsByTagName('url')[0].innerHTML)
+					url.setAttribute('target', '_blank')
+
+					let image = document.createElement('img')
+					image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
+					image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
+					url.appendChild(image)
+					box.appendChild(url)
+				} else {
+					let image = document.createElement('img')
+					image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
+					image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
+					box.appendChild(image)
+				}
+			} else {
+				if (entry.getElementsByTagName('url').length > 0) {
+					let url = document.createElement('a')
+					url.setAttribute('href', entry.getElementsByTagName('url')[0].innerHTML)
+					url.setAttribute('target', '_blank')
+					url.innerText = entry.getElementsByTagName('title')[0].innerHTML
+
+					box.appendChild(url)
+				} else {
+					box.innerText = entry.getElementsByTagName('title')[0].innerHTML
+				}
+			}
+			div.appendChild(box)
+			friends.appendChild(div)
+		}
+
+	}
+}
 
 function parseAgenda() {
 	let request = new XMLHttpRequest()
