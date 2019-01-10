@@ -7,10 +7,20 @@
 	<sponsor>
 		<title>Raiffeisen</title>
 		<image>raiffeisen.png</image>
-		<url>https://www.raiffeisen.ch/wohlen</url>
+		<url>www.raiffeisen.ch/wohlen</url>
 	</sponsor>
-
+	<sponsor>
+		<title>A. Käppeli's Söhne AG</title>
+		<image>kaeppeli.gif</image>
+	</sponsor>
 	<friend>
-		<title>Käppeli</title>
+		<title>Brugger Modelleisenbahn-Club</title>
+		<image>bmc.jpg</image>
+		<url>www.bmc-brugg.ch</url>
+	</friend>
+	<friend>
+		<title>Eisenbahn-Modellbau-Club Aarau</title>
+		<image>emca.png</image>
+		<url>www.emcaarau.ch</url>
 	</friend>
 </partner>
