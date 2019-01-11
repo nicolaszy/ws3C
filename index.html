@@ -11,12 +11,13 @@
           type="text/css"
           rel="stylesheet"
           media="screen"/>
+    <link rel="stylesheet" href="css/bulma-carousel.min.css">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/>
 
     <!-- JavaScript -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <script src="js/bulma-carousel.min.js"></script>
 </head>
 <body>
 
@@ -109,6 +110,40 @@
                 </div>
             </div>
         </div>
+
+        <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
+            <div class='carousel-container'>
+                <div class='carousel-item has-background is-active'>
+                    <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt=""
+                         width="640" height="310"/>
+                    <div class="title">Merry Christmas</div>
+                </div>
+                <div class='carousel-item has-background'>
+                    <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" width="640"
+                         height="310"/>
+                    <div class="title">Original Gift: Offer a song with <a href="https://lasongbox.com" target="_blank">La
+                        Song Box</a></div>
+                </div>
+                <div class='carousel-item has-background'>
+                    <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" width="640"
+                         height="310"/>
+                    <div class="title">Sushi time</div>
+                </div>
+                <div class='carousel-item has-background'>
+                    <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" width="640"
+                         height="310"/>
+                    <div class="title">Life</div>
+                </div>
+            </div>
+            <div class="carousel-navigation is-centered">
+                <div class="carousel-nav-left">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+                <div class="carousel-nav-right">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -171,13 +206,13 @@
         <h2 class="title">Referenzen</h2>
 
         <div class="tile is-ancestor">
-            <div class="tile is-parent is-6">
+            <div class="tile is-parent is-8">
                 <div class="tile is-child ">
                     <h3 class="subtitle">Sponsoren</h3>
                     <div id="sponsors" class="columns is-multiline"></div>
                 </div>
             </div>
-            <div class="tile is-parent is-6">
+            <div class="tile is-parent is-4">
                 <div class="tile is-child ">
                     <h3 class="subtitle">Partner</h3>
                     <div id="friends" class="columns is-multiline"></div>

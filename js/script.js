@@ -1,4 +1,4 @@
-/* global $ */
+/* global $ bulmaCarousel */
 
 
 $(document).ready(function () {
@@ -20,6 +20,7 @@ $(document).ready(function () {
 			})
 		}
 	})
+	bulmaCarousel.attach()
 })
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,21 +69,23 @@ function parsePartner() {
 			box.className = 'box'
 
 			if (entry.getElementsByTagName('image').length > 0) {
+				let figure = document.createElement('figure')
+				figure.className = 'image is-3by1'
+
+				let image = document.createElement('img')
+				image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
+				image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
+
+				figure.appendChild(image)
+
 				if (entry.getElementsByTagName('url').length > 0) {
 					let url = document.createElement('a')
 					url.setAttribute('href', entry.getElementsByTagName('url')[0].innerHTML)
 					url.setAttribute('target', '_blank')
-
-					let image = document.createElement('img')
-					image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
-					image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
-					url.appendChild(image)
+					url.appendChild(figure)
 					box.appendChild(url)
 				} else {
-					let image = document.createElement('img')
-					image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
-					image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
-					box.appendChild(image)
+					box.appendChild(figure)
 				}
 			} else {
 				if (entry.getElementsByTagName('url').length > 0) {
@@ -111,21 +114,23 @@ function parsePartner() {
 			box.className = 'box'
 
 			if (entry.getElementsByTagName('image').length > 0) {
+				let figure = document.createElement('figure')
+				figure.className = 'image is-1by1'
+				let image = document.createElement('img')
+				image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
+				image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
+
+				figure.appendChild(image)
+
 				if (entry.getElementsByTagName('url').length > 0) {
 					let url = document.createElement('a')
 					url.setAttribute('href', entry.getElementsByTagName('url')[0].innerHTML)
 					url.setAttribute('target', '_blank')
 
-					let image = document.createElement('img')
-					image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
-					image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
-					url.appendChild(image)
+					url.appendChild(figure)
 					box.appendChild(url)
 				} else {
-					let image = document.createElement('img')
-					image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
-					image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
-					box.appendChild(image)
+					box.appendChild(figure)
 				}
 			} else {
 				if (entry.getElementsByTagName('url').length > 0) {
