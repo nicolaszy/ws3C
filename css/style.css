@@ -6,6 +6,20 @@
  * Made By MaterializeCSS.com
  */
 
+body{
+    background-color: black;
+}
+
+.left{
+    width: 50%;
+    float:left;
+}
+
+.right{
+    width:50%;
+    float:right;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -29,7 +43,63 @@ p {
     width: 100%;
   }
 
+.navbar-burger span{
+    height:3px;
+    width: 30px;
+    top: 10px;
+    left: calc(50% - 13px);
+}
+
+.navbar-burger span:nth-child(1) {
+    top: calc(50% - 8px);
+}
+.navbar-burger span:nth-child(2) {
+    top: calc(50% - 0px);
+}
+.navbar-burger span:nth-child(3) {
+    top: calc(50% + 8px);
+}
+.navbar-burger.is-active span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.navbar-burger.is-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.active {
+        text-decoration:underline;
+    }
+h1{
+    padding-left: 40px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 30pt;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 40px;
+    color: dodgerblue;
+}
+
+h2 {
+    padding-left: 40px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 20pt;
+    font-weight: 700;
+    text-align: left;
+    padding-bottom: 40px;
+    color: dodgerblue;
+}
+
 @media only screen and (max-width : 992px) {
+    
+h1{
+    padding-left: 40px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 23pt;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 40px;
+    color: dodgerblue;
+}
   .parallax-container .section {
     position: absolute;
     top: 40%;
@@ -54,4 +124,17 @@ p {
 
 footer.page-footer {
   margin: 0;
+}
+
+.agendaentry {
+
+}
+
+.agendatitle {
+  padding: 10px 15px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
 }

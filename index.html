@@ -1,16 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Freiämter Eisenbahn Amateur Club</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/bulma.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+          type="text/css"
+          rel="stylesheet"
+          media="screen"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/>
+
+    <!-- JavaScript -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
+
+
+<!-- ############################################# -->
+<!--                   Navigation                  -->
+<!-- ############################################# -->
+<nav class="navbar is-fixed-top" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://feac.ch">
+            <img src="images/loc.png" alt="Logo">
+        </a>
+
+        <a role="button" class="navbar-burger burger"
+           aria-label="menu"
+           aria-expanded="false"
+           data-target="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start">
+            <a href="#home" class="navbar-item">Home</a>
+            <a href="#anlage" class="navbar-item">Anlage</a>
+            <a href="#mitglieder" class="navbar-item">Mitglieder</a>
+            <a href="#ueberuns" class="navbar-item">&Uuml;ber uns</a>
+            <a href="#referenzen" class="navbar-item">Referenzen</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ############################################# -->
+<!--                      Home                     -->
+<!-- ############################################# -->
+<div class="section" id="home">
+    <div class="container">
+        <h1 style="text-transform: uppercase;">Freiämter Eisenbahn Amateur Club</h1>
+        <figure class="image is-4by3">
+            <img src="images/feaclok.jpg" alt="Cover Image">
+        </figure>
+    </div>
+</div>
+
+<!-- ############################################# -->
+<!--                     Anlage                    -->
+<!-- ############################################# -->
+<div class="section" id="anlage">
+    <div class="container">
+        <h2>Anlage</h2>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent is-4">
+                <div class="tile is-child box">
+                    <h3>Spur 0</h3>
+                    Massstab 1:45<br/>
+                    Spurweite 32mm<br/>
+                    Materialwert 75'500 CHF<br/>
+                    Länge: 312m<br/>
+                    Weichen: 34 (Eigenbau)<br/>
+                    Steuerung: KIREKA<br/>
+                    Weichenmotoren: Fulgurex<br/>
+                    Baustunden: 650
+                </div>
+            </div>
+            <div class="tile is-parent is-4">
+                <div class="tile is-child box">
+                    <h3>Spur H0</h3>
+                    Massstab 1:87<br/>
+                    Spurweite 16.5mm<br/>
+                    Materialwert 37'000 CHF<br/>
+                    Länge: 659m<br/>
+                    Weichen: 48<br/>
+                    Steuerung: KIREKA<br/>
+                    Weichenmotoren: Fulgurex<br/>
+                    Baustunden: 350
+                </div>
+            </div>
+            <div class="tile is-parent is-4">
+                <div class="tile is-child box">
+                    <h3>Spur N</h3>
+                    Massstab 1:160<br/>
+                    Spurweite 9mm<br/>
+                    Materialwert 1'000 CHF<br/>
+                    Länge: 59m<br/>
+                    Weichen: 12<br/>
+                    Steuerung: Analog<br/>
+                    Weichenmotoren: Servo<br/>
+                    Baustunden: 160
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ############################################# -->
+<!--                   Mitglieder                  -->
+<!-- ############################################# -->
+<div class="section" id="mitglieder">
+    <div class="container">
+        <h2>Mitglieder</h2>
+        <div class="container" style="left: 40px;">
+            <h3 class="subtitle">Agenda</h3>
+            <div id="agenda" class="columns is-4 is-variable" style="transform: translateX(30px);">
+                <h4 class="left">22.10.19</h4>  <h4 class="right">Basteln</h4>
+                <h4 class="left">22.10.19</h4>  <h4 class="right">Basteln</h4>
+                <h4 class="left">22.10.19</h4>  <h4 class="right">Basteln</h4>
+                <br/>
+                </div>
+            <h3 class="subtitle">Aktivit&auml;ten</h3>
+        </div>
+    </div>
+</div>
+
+
+<!-- ############################################# -->
+<!--                    &Uuml;ber uns                   -->
+<!-- ############################################# -->
+<div class="section" id="ueberuns">
+    <div class="container">
+        <h2>&Uuml;ber uns</h2>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent is-vertical is-4">
+                <div class="tile is-child box">
+                    <h3 class="subtitle">Vorstand</h3>
+                    Dr. Armin Meier (Pr&auml;sident)<br/>
+                    Alan Rees (Vize-Pr&auml;sident)<br/>
+                    Ernst J&auml;ggi (Aktuar)<br/>
+                    Ernst Rosenberg (Bauchef)<br/>
+                    Urs Jenny (Elektro)<br/>
+                    Christoph Mutzner (Kassier)<br/>
+                </div>
+                <div class="tile is-child box">Jeden Donnerstagabend ab 19:00 treffen sich die Mitglieder zu Bauabenden.
+                    Rund zwei Stunden wird mehr oder weniger aktiv verdrahtet, geschottert, Hauser gesetzt oder ganz
+                    einfach nur den Staub abgesaugt. So vielfaltig die Aufgaben sind, so verschieden ist auch der
+                    beruflichen Rucksack den die Mitglieder mitbringen. Vom Handwerker auf der Baustelle uber den
+                    'Mundhandwerker' bis zu EDV-Fachspezialisten und Büchhaltern ist im FEAC alles vertreten. Für jeden
+                    bietet sich die Moglichkeit, sich aktiv zu betätigen. Frei nach dem Motto: Der Weg ist das Ziel.
+                    Gäste und neuen Mitglieder sind immer Willkommen.
+                </div>
+            </div>
+            <div class="tile is-parent is-8">
+                <div class="tile is-child box">
+                    <h3 class="subtitle">Location</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1351.5305515259952!2d8.28086188658416!3d47.35220499541237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDIxJzA3LjkiTiA4wrAxNic1NC44IkU!5e0!3m2!1sen!2sch!4v1547134265530"
+                            width="100%" height="420" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ############################################# -->
+<!--                   Referenzen                  -->
+<!-- ############################################# -->
+<div class="section" id="referenzen">
+    <div class="container">
+        <h2>Referenzen</h2>
+
+        <div class="tile is-ancestor">
+            <div class="tile is-parent is-6">
+                <div class="tile is-child ">
+                    <h3 class="subtitle">Sponsoren</h3>
+                    <div id="sponsors" class="columns is-multiline"></div>
+                </div>
+            </div>
+            <div class="tile is-parent is-6">
+                <div class="tile is-child ">
+                    <h3 class="subtitle">Partner</h3>
+                    <div id="friends" class="columns is-multiline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ############################################# -->
+<!--                     Footer                    -->
+<!-- ############################################# -->
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <!-- template -->
+            <strong>FEAC</strong> by <a href="http://www.christianseiler.ch">Christian Seiler Services</a>. The source
+            code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
