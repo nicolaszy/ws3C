@@ -7,7 +7,7 @@
     "test": "npm-run-all -p -r lint html css",
     "lint": "eslint **/*.js",
     "html": "html5v *.html",
-    "css": "css-validator **/(\w+).css"
+    "css": "css-validator **/style.css"
   },
   "repository": {
     "type": "git",
