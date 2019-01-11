@@ -10,6 +10,10 @@ Developing and Contributing
 
 Take a look at the [Contribution Documents](https://github.com/christian-seiler/ws3c/blob/master/CONTRIBUTING.md) to see how to get your changes merged in.
 
+Adding Data
+-----
+Read [How to add Data](data.md).
+
 Licensing
 ---------
 
