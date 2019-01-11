@@ -217,7 +217,7 @@ function parseAgenda() {
 			let entry = entries[i]
 
 			let div = document.createElement('div')
-			div.className = 'column'
+			div.className = 'column is-4'
 
 			let box = document.createElement('div')
 			box.className = 'box'
