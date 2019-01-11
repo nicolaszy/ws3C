@@ -5,9 +5,9 @@
   "main": "script.js",
   "scripts": {
     "test": "npm-run-all -p -r lint html css",
-    "lint": "eslint **/*.js",
+    "lint": "eslint js/*.js",
     "html": "html5v *.html",
-    "css": "css-validator **/*.css"
+    "css": "css-validator css/*.css"
   },
   "repository": {
     "type": "git",
