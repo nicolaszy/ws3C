@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns="https://christian-seiler.github.io/ws3C"
+		   targetNamespace="https://christian-seiler.github.io/ws3C"
+		   elementFormDefault="qualified">
+
+	<xs:element name="title" type="xs:string"/>
+	<xs:element name="image" type="xs:string"/>
+	<xs:element name="url" type="xs:string"/>
+
+
+	<xs:element name="friend">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="title"/>
+				<xs:element ref="image" minOccurs="0"/>
+				<xs:element ref="url" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="sponsor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="title"/>
+				<xs:element ref="image" minOccurs="0"/>
+				<xs:element ref="url" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="partner">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sponsor" maxOccurs="unbounded" minOccurs="0"/>
+				<xs:element ref="friend" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

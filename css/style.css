@@ -64,3 +64,14 @@ footer.page-footer {
   padding: 10px 15px;
   color: black;
 }
+
+a {
+  text-decoration: none;
+}
+
+
+.carousel .carousel-container .carousel-item.has-background .is-background {
+  box-sizing: border-box;
+  height: 500px;
+  object-fit: contain;
+}

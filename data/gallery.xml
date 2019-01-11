@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gallery xmlns="https://christian-seiler.github.io/ws3C"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="https://christian-seiler.github.io/ws3C
+        gallery.xsd">
+	<slide>
+		<title>Tm 2/2 RhB Spur H0n</title>
+		<image>feac-1.jpg</image>
+	</slide>
+	<slide>
+		<title>Re 4/4 SBB Carco Spur H0</title>
+		<image>feac-2.jpg</image>
+	</slide>
+	<slide>
+		<title>Jura Cement AG Wildegg Spur H0</title>
+		<image>feac-3.jpg</image>
+	</slide>
+	<slide>
+		<title>Spur H0</title>
+		<image>feac-4.jpg</image>
+	</slide>
+	<slide>
+		<title>Spur 0</title>
+		<image>feac-5.jpg</image>
+	</slide>
+</gallery>
