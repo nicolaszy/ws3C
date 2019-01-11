@@ -11,6 +11,9 @@
           type="text/css"
           rel="stylesheet"
           media="screen"/>
+
+    <link rel="stylesheet" href="vendor/bulma-carousel.min.css">
+
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/>
 
     <!-- JavaScript -->
@@ -56,7 +59,9 @@
 <!-- ############################################# -->
 <div class="section" id="home">
     <div class="container">
-        <h1 style="text-transform: uppercase;">Freiämter Eisenbahn Amateur Club</h1>
+
+      <h1 style="text-transform: uppercase;">Freiämter Eisenbahn Amateur Club</h1>
+
         <figure class="image is-4by3">
             <img src="images/feaclok.jpg" alt="Cover Image">
         </figure>
@@ -69,6 +74,7 @@
 <div class="section" id="anlage">
     <div class="container">
         <h2>Anlage</h2>
+        <h2 class="title">Anlage</h2>
         <div class="tile is-ancestor">
             <div class="tile is-parent is-4">
                 <div class="tile is-child box">
@@ -110,6 +116,18 @@
                 </div>
             </div>
         </div>
+        <h3 class="subtitle">Gallerie</h3>
+        <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
+            <div class='carousel-container' id="gallery"></div>
+            <div class="carousel-navigation is-centered">
+                <div class="carousel-nav-left">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+                <div class="carousel-nav-right">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -130,6 +148,10 @@
                 </div>
             <h3 class="subtitle">Aktivit&auml;ten</h3>
         </div>
+        <h2 class="title">Mitglieder</h2>
+        <h3 class="subtitle">Agenda</h3>
+        <div id="agenda" class="columns is-4 is-variable"></div>
+        <h3 class="subtitle">Aktivit&auml;ten</h3>
     </div>
 </div>
 
@@ -139,7 +161,9 @@
 <!-- ############################################# -->
 <div class="section" id="ueberuns">
     <div class="container">
-        <h2>&Uuml;ber uns</h2>
+
+      <h2>&Uuml;ber uns</h2>
+
         <div class="tile is-ancestor">
             <div class="tile is-parent is-vertical is-4">
                 <div class="tile is-child box">
@@ -180,12 +204,16 @@
 
         <div class="tile is-ancestor">
             <div class="tile is-parent is-6">
+              
+        <h2 class="title">Referenzen</h2>
+
+        <div class="tile is-ancestor">
+            <div class="tile is-parent is-8">
                 <div class="tile is-child ">
                     <h3 class="subtitle">Sponsoren</h3>
                     <div id="sponsors" class="columns is-multiline"></div>
                 </div>
             </div>
-            <div class="tile is-parent is-6">
                 <div class="tile is-child ">
                     <h3 class="subtitle">Partner</h3>
                     <div id="friends" class="columns is-multiline"></div>
@@ -214,6 +242,8 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
+
+<script src="vendor/bulma-carousel.min.js"></script>
 
 </body>
 </html>

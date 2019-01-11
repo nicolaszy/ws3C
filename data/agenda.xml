@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns="https://christian-seiler.github.io/ws3C"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://christian-seiler.github.io/ws3C
+        agenda.xsd">
+
+    <entry>
+        <title>Basteln</title>
+        <recuring r="jeden Donnerstag"/>
+        <date time="19:00"/>
+        <location name="Clublokal">
+            <street>Steingasse</street>
+            <plz>5610</plz>
+            <city>Wohlen AG</city>
+        </location>
+        <description></description>
+    </entry>
+    <entry>
+        <title>Tag der offenen Tür</title>
+        <date from="2019-09-07" to="2019-09-08"/>
+        <location name="Clublokal">
+            <street>Steingasse</street>
+            <plz>5610</plz>
+            <city>Wohlen AG</city>
+        </location>
+        <description></description>
+    </entry>
+</agenda>

@@ -138,3 +138,9 @@ footer.page-footer {
 a {
   text-decoration: none;
 }
+
+.carousel .carousel-container .carousel-item.has-background .is-background {
+  box-sizing: border-box;
+  height: 500px;
+  object-fit: contain;
+}

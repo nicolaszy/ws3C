@@ -1,6 +1,6 @@
 # ws3C
 
-[![Build Status](https://travis-ci.org/Christian-Seiler/ws3C.svg?branch=master)](https://travis-ci.org/Christian-Seiler/ws3C)
+[![Build Status](https://travis-ci.org/Christian-Seiler/ws3C.svg?branch=develop)](https://travis-ci.org/Christian-Seiler/ws3C)
 
 View the current status of the [Website](https://christian-seiler.github.io/ws3C/)
 

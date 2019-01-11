@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://christian-seiler.github.io/ws3C"
+           targetNamespace="https://christian-seiler.github.io/ws3C"
+           elementFormDefault="qualified">
+    <xs:element name="street" type="xs:string"/>
+    <xs:element name="plz" type="xs:short"/>
+    <xs:element name="city" type="xs:string"/>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="recuring">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="r"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="location">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="street" minOccurs="0"/>
+                <xs:element ref="plz" minOccurs="0"/>
+                <xs:element ref="city" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="description" type="xs:string"/>
+    <xs:element name="date">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="from"/>
+                    <xs:attribute type="xs:string" name="to" use="optional"/>
+                    <xs:attribute type="xs:string" name="time" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="entry">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title"/>
+                <xs:element ref="recuring" minOccurs="0"/>
+                <xs:element ref="date" minOccurs="0"/>
+                <xs:element ref="location"/>
+                <xs:element ref="description" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="agenda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="entry" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
