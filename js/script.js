@@ -4,6 +4,7 @@
 $(document).ready(function () {
 	parseAgenda()
 	parsePartner()
+	parseGallery()
 
 	// https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1
 	$('a').on('click', function (event) {
@@ -20,7 +21,7 @@ $(document).ready(function () {
 			})
 		}
 	})
-	bulmaCarousel.attach()
+
 })
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,6 +43,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+function parseGallery() {
+	let request = new XMLHttpRequest()
+	request.onreadystatechange = function () {
+		if (this.readyState === 4 && this.status === 200) {
+			read(this)
+		}
+
+	}
+	request.open('GET', 'data/gallery.xml', true)
+	request.send()
+
+	function read(xml) {
+		let doc = xml.responseXML
+		let gallery = document.getElementById('gallery')
+		let slides = doc.getElementsByTagName('slide')
+		for (let i = 0; i < slides.length; i++) {
+			let slide = slides[i]
+
+			let div = document.createElement('div')
+			div.className = i === 0 ? 'carousel-item has-background is-active' : 'carousel-item has-background'
+
+			let t = slide.getElementsByTagName('title')[0].innerHTML
+			let img = document.createElement('img')
+			img.className = 'is-background'
+			img.setAttribute('src', 'images/gallery/' + slide.getElementsByTagName('image')[0].innerHTML)
+			img.setAttribute('height', '300')
+			img.setAttribute('alt', t)
+
+			let title = document.createElement('div')
+			title.className = 'title'
+			title.innerText = t
+
+			div.append(img, title)
+			gallery.appendChild(div)
+		}
+		bulmaCarousel.attach()
+	}
+}
+
+/*
+*  <div class='carousel-item has-background is-active'>
+*      <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt=""  width="640"
+ *      height="310"/>
+ *      <div class="title">Merry Christmas</div>
+ *  </div>
+* */
 
 function parsePartner() {
 	let request = new XMLHttpRequest()
