@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="has-navbar-fixed-top">
+<html lang="de" class="has-navbar-fixed-top">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -11,12 +11,15 @@
           type="text/css"
           rel="stylesheet"
           media="screen"/>
-    <link rel="stylesheet" href="css/bulma-carousel.min.css">
+
+    <link rel="stylesheet" href="vendor/bulma-carousel.min.css">
+
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen"/>
 
     <!-- JavaScript -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -69,7 +72,7 @@
     <div class="container">
         <h2 class="title">Anlage</h2>
         <div class="tile is-ancestor">
-            <div class="tile is-parent is-4">
+            <div class="tile is-parent is-3">
                 <div class="tile is-child box">
                     <h3>Spur 0</h3>
                     Massstab 1:45<br/>
@@ -82,11 +85,12 @@
                     Baustunden: 650
                 </div>
             </div>
-            <div class="tile is-parent is-4">
+            <div class="tile is-parent is-3">
                 <div class="tile is-child box">
-                    <h3>Spur H0</h3>
+                    <h3>Spur H0 / H0m</h3>
                     Massstab 1:87<br/>
-                    Spurweite 16.5mm<br/>
+                    Spurweite 16.5mm (Normalspur) 12mm (Meterspur)<br/>
+                    Bergbahn mit Zahnradantrieb
                     Materialwert 37'000 CHF<br/>
                     Länge: 659m<br/>
                     Weichen: 48<br/>
@@ -95,7 +99,7 @@
                     Baustunden: 350
                 </div>
             </div>
-            <div class="tile is-parent is-4">
+            <div class="tile is-parent is-3">
                 <div class="tile is-child box">
                     <h3>Spur N</h3>
                     Massstab 1:160<br/>
@@ -108,7 +112,24 @@
                     Baustunden: 160
                 </div>
             </div>
+            <div class="tile is-parent is-3">
+                <div class="tile is-vertical">
+                    <div class="tile is-child box">
+                        <h3>KIREKA</h3>
+                        Eigenentwicklung<br/>
+                        DOS-basierende Zugsteuerungssoftware<br/>
+                        Programiersprache Visual Basic
+                    </div>
+                    <div class="tile is-child box">
+                        <h3>Seilbahn</h3>
+                        Steuerung: Arduino
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+
         <h3 class="subtitle">Gallerie</h3>
         <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
             <div class='carousel-container' id="gallery"></div>
@@ -131,9 +152,12 @@
 <div class="section" id="mitglieder">
     <div class="container">
         <h2 class="title">Mitglieder</h2>
+
         <h3 class="subtitle">Agenda</h3>
-        <div id="agenda" class="columns is-4 is-variable"></div>
+        <div id="agenda" class="columns is-multiline"></div>
+
         <h3 class="subtitle">Aktivit&auml;ten</h3>
+
     </div>
 </div>
 
@@ -156,12 +180,12 @@
                     Christoph Mutzner (Kassier)<br/>
                 </div>
                 <div class="tile is-child box">Jeden Donnerstagabend ab 19:00 treffen sich die Mitglieder zu Bauabenden.
-                    Rund zwei Stunden wird mehr oder weniger aktiv verdrahtet, geschottert, Hauser gesetzt oder ganz
-                    einfach nur den Staub abgesaugt. So vielfaltig die Aufgaben sind, so verschieden ist auch der
-                    beruflichen Rucksack den die Mitglieder mitbringen. Vom Handwerker auf der Baustelle uber den
-                    'Mundhandwerker' bis zu EDV-Fachspezialisten und Büchhaltern ist im FEAC alles vertreten. Für jeden
-                    bietet sich die Moglichkeit, sich aktiv zu betätigen. Frei nach dem Motto: Der Weg ist das Ziel.
-                    Gäste und neuen Mitglieder sind immer Willkommen.
+                    Rund zwei Stunden wird mehr oder weniger aktiv verdrahtet, geschottert, H&auml;user gesetzt oder
+                    ganz einfach nur den Staub abgesaugt. So vielfaltig die Aufgaben sind, so verschieden ist auch der
+                    beruflichen Rucksack den die Mitglieder mitbringen. Vom Handwerker auf der Baustelle &uuml;ber den
+                    'Mundhandwerker' bis zu EDV-Fachspezialisten und Buchhaltern ist im FEAC alles vertreten. Für jeden
+                    bietet sich die M&ouml;glichkeit, sich aktiv zu bet&auml;tigen. Frei nach dem Motto: Der Weg ist
+                    das Ziel. G&auml;ste und neuen Mitglieder sind immer Willkommen.
                 </div>
             </div>
             <div class="tile is-parent is-8">
@@ -218,7 +242,8 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
-<script src="js/bulma-carousel.min.js"></script>
+
+<script src="vendor/bulma-carousel.min.js"></script>
 
 </body>
 </html>
