@@ -4,11 +4,11 @@
 		 xsi:schemaLocation="https://christian-seiler.github.io/ws3C
         gallery.xsd">
 	<slide>
-		<title>Tm 2/2 RhB Spur H0n</title>
+		<title>RhB Tm 2/2 91 Spur H0n</title>
 		<image>feac-1.jpg</image>
 	</slide>
 	<slide>
-		<title>Re 4/4 SBB Carco Spur H0</title>
+		<title>SBB Cargo Re 6/6 620 11655 Spur H0</title>
 		<image>feac-2.jpg</image>
 	</slide>
 	<slide>
@@ -20,7 +20,15 @@
 		<image>feac-4.jpg</image>
 	</slide>
 	<slide>
-		<title>Spur 0</title>
+		<title>SBB E 3/3 8586 Spur 0</title>
 		<image>feac-5.jpg</image>
+	</slide>
+	<slide>
+		<title>DB BR44 339 Spur 0</title>
+		<image>feac-6.jpg</image>
+	</slide>
+	<slide>
+		<title>BLS Ae 6/8 205</title>
+		<image>feac-7.jpg</image>
 	</slide>
 </gallery>
