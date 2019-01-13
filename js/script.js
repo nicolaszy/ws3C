@@ -1,5 +1,5 @@
 /* global $ bulmaCarousel */
-
+/* exported send */
 
 $(document).ready(function () {
 	parseAgenda()
@@ -22,6 +22,7 @@ $(document).ready(function () {
 		}
 	})
 
+
 })
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,8 +41,52 @@ document.addEventListener('DOMContentLoaded', () => {
 			})
 		})
 	}
-
 })
+
+function validateEmail(value) {
+
+	let classes = document.getElementById('email').classList
+	let emailok = document.getElementById('email-ok')
+	let emailnok = document.getElementById('email-nok')
+
+	let regex = new RegExp(/([\w.\-_]+)?\w+@[\w-_]+(\.\w+)+/, 'igm')
+	if (regex.test(value)) {
+		classes.remove('is-danger')
+		classes.add('is-primary')
+		emailok.style.display = 'inline-flex'
+		emailnok.style.display = 'none'
+		return true
+	} else {
+		classes.remove('is-primary')
+		classes.add('is-danger')
+		emailok.style.display = 'none'
+		emailnok.style.display = 'inline-flex'
+		return false
+	}
+}
+
+function send() {// eslint-disable-line no-unused-vars
+
+	let name = document.getElementById('name').value
+	let email = document.getElementById('email').value
+	let phone = document.getElementById('phone').value
+	let subject = document.getElementById('subject').value
+	let question = document.getElementById('question').value
+
+	let to = 'exemple@email.com'
+
+	let body = 'Anfrage von feac.ch %0D%0A%0D%0A' +
+		`Name: ${name}%0D%0A` +
+		`Email: ${email}%0D%0A` +
+		`Telefon: ${phone}%0D%0A%0D%0A` +
+		`Betreff: ${subject}%0D%0A%0D%0A` +
+		`Anfrage: ${question}`
+
+	if (validateEmail(email)) {
+		window.open(`mailto:${to}?cc=${email}&subject=${subject}&body=${body}`)
+	}
+
+}
 
 function parseGallery() {
 	let request = new XMLHttpRequest()
