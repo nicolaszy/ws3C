@@ -1,5 +1,5 @@
 /* global $ bulmaCarousel */
-
+/* exported send */
 
 $(document).ready(function () {
 	parseAgenda()
@@ -21,7 +21,6 @@ $(document).ready(function () {
 			})
 		}
 	})
-
 })
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,8 +39,52 @@ document.addEventListener('DOMContentLoaded', () => {
 			})
 		})
 	}
-
 })
+
+function validateEmail(value) {
+
+	let classes = document.getElementById('email').classList
+	let emailok = document.getElementById('email-ok')
+	let emailnok = document.getElementById('email-nok')
+
+	let regex = new RegExp(/([\w.\-_]+)?\w+@[\w-_]+(\.\w+)+/, 'igm')
+	if (regex.test(value)) {
+		classes.remove('is-danger')
+		classes.add('is-primary')
+		emailok.style.display = 'inline-flex'
+		emailnok.style.display = 'none'
+		return true
+	} else {
+		classes.remove('is-primary')
+		classes.add('is-danger')
+		emailok.style.display = 'none'
+		emailnok.style.display = 'inline-flex'
+		return false
+	}
+}
+
+function send() {// eslint-disable-line no-unused-vars
+
+	let name = document.getElementById('name').value
+	let email = document.getElementById('email').value
+	let phone = document.getElementById('phone').value
+	let subject = document.getElementById('subject').value
+	let question = document.getElementById('question').value
+
+	let to = 'exemple@email.com'
+
+	let body = 'Anfrage von feac.ch %0D%0A%0D%0A' +
+		`Name: ${name}%0D%0A` +
+		`Email: ${email}%0D%0A` +
+		`Telefon: ${phone}%0D%0A%0D%0A` +
+		`Betreff: ${subject}%0D%0A%0D%0A` +
+		`Anfrage: ${question}`
+
+	if (validateEmail(email)) {
+		window.open(`mailto:${to}?cc=${email}&subject=${subject}&body=${body}`)
+	}
+
+}
 
 function parseGallery() {
 	let request = new XMLHttpRequest()
@@ -82,14 +125,6 @@ function parseGallery() {
 	}
 }
 
-/*
-*  <div class='carousel-item has-background is-active'>
-*      <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt=""  width="640"
- *      height="310"/>
- *      <div class="title">Merry Christmas</div>
- *  </div>
-* */
-
 function parsePartner() {
 	let request = new XMLHttpRequest()
 	request.onreadystatechange = function () {
@@ -118,6 +153,7 @@ function parsePartner() {
 			if (entry.getElementsByTagName('image').length > 0) {
 				let figure = document.createElement('figure')
 				figure.className = 'image is-3by1'
+				figure.setAttribute('height', '128')
 
 				let image = document.createElement('img')
 				image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
@@ -162,7 +198,8 @@ function parsePartner() {
 
 			if (entry.getElementsByTagName('image').length > 0) {
 				let figure = document.createElement('figure')
-				figure.className = 'image is-1by1'
+				figure.className = 'image is-128x128'
+
 				let image = document.createElement('img')
 				image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
 				image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)
