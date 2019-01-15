@@ -21,8 +21,6 @@ $(document).ready(function () {
 			})
 		}
 	})
-
-
 })
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -127,14 +125,6 @@ function parseGallery() {
 	}
 }
 
-/*
-*  <div class='carousel-item has-background is-active'>
-*      <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt=""  width="640"
- *      height="310"/>
- *      <div class="title">Merry Christmas</div>
- *  </div>
-* */
-
 function parsePartner() {
 	let request = new XMLHttpRequest()
 	request.onreadystatechange = function () {
@@ -163,6 +153,7 @@ function parsePartner() {
 			if (entry.getElementsByTagName('image').length > 0) {
 				let figure = document.createElement('figure')
 				figure.className = 'image is-3by1'
+				figure.setAttribute('height', '128')
 
 				let image = document.createElement('img')
 				image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
@@ -207,7 +198,8 @@ function parsePartner() {
 
 			if (entry.getElementsByTagName('image').length > 0) {
 				let figure = document.createElement('figure')
-				figure.className = 'image is-1by1'
+				figure.className = 'image is-128x128'
+
 				let image = document.createElement('img')
 				image.setAttribute('src', 'images/' + entry.getElementsByTagName('image')[0].innerHTML)
 				image.setAttribute('title', entry.getElementsByTagName('title')[0].innerHTML)

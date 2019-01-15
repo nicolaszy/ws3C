@@ -26,11 +26,16 @@
 	<friend>
 		<title>Brugger Modelleisenbahn-Club</title>
 		<image>bmc.png</image>
-		<url>www.bmc-brugg.ch</url>
+		<url>bmc-brugg.ch</url>
 	</friend>
 	<friend>
 		<title>Eisenbahn-Modellbau-Club Aarau</title>
 		<image>emca.png</image>
-		<url>www.emcaarau.ch</url>
+		<url>emcaarau.ch</url>
+	</friend>
+	<friend>
+		<title>Schweizerischen Verband Eisenbahn-Amateur SVEA</title>
+		<image>svea.png</image>
+		<url>svea-asea.ch</url>
 	</friend>
 </partner>
